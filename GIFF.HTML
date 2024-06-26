@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> LET LIFE SURPRISE YOU </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+        .container {
+            margin: 50px auto;
+            display: none;
+        }
+        .container.active {
+            display: block;
+        }
+        .link {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .gif-container {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function showSection(id) {
+            document.querySelectorAll('.container').forEach(container => container.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+
+        function showGif() {
+            document.getElementById('gifContainer').style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <div id="section1" class="container active">
+        <h1> <p>Life is full of unexpected things</p>
+            <p> Expect the Unexpected </p> </h1>
+        <a href="javascript:void(0);" class="link" onclick="showSection('section2')"> GIVE A CLICK </a>
+    </div>
+
+    <div id="section2" class="container">
+        <h1>Are you geared up??</h1>
+        <a href="javascript:void(0);" class="link" onclick="showSection('section3')">Tap here</a>
+    </div>
+
+    <div id="section3" class="container">
+        <h1>TIRED OR EXCITED ?? </h1>
+        <a href="javascript:void(0);" class="link" onclick="showSection('section4')"> ONE MORE STEP TO GO </a>
+    </div>
+
+    <div id="section4" class="container">
+        <h1>You're almost at the finish line.</h1>
+        <a href="javascript:void(0);" class="link" onclick="showGif()">OPEN</a>
+        <div id="gifContainer" class="gif-container">
+            <img src="https://media.tenor.com/YdVZeorZIJgAAAAM/baby-laugh.gif" alt="Cool GIF" style="max-width: 100%; height: auto;">
+              <p> YOU ARE PRANKED !!!!  </P>
+
+        </div>
+    </div>
+</body>
+</html>
